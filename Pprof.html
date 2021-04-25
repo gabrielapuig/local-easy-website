@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Profissional</title>
+    <style>
+        *{
+            padding: 5;
+            margin: 3;
+        }
+       body{
+            font-family: arial, helvetica;
+            margin: 0;
+            background: #f1f1f1;
+        }
+        #fild{
+            width: 800px;
+            margin-left: 17%;
+        }
+        header {
+            text-align: center;
+            background: rgb(182, 3, 107);
+            padding: 30px;
+        }
+        
+        header h1{
+            font-size: 50px;
+            color: white;
+        }
+        
+        nav ul{
+            list-style-type: none;
+            background-color: #5f7c8a; 
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a{
+             color:white;
+            text-decoration: none;
+            padding: 16px;
+            display: block;
+        }
+        
+        nav li{
+            float:left;
+        }
+        
+        nav a:hover{
+            background-color: white;
+            color: #5f7c8a;
+        }
+        img#logo {
+        width:10%;
+        height: auto;
+        }
+        footer{
+            padding: 20px;
+            background: #5f7c8a;
+            color: white;
+            padding-top: 20px;
+            
+        }
+        
+        footer dl, footer p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        footer dt{
+            font-weight: bold;
+        }
+        
+        footer dd{
+            margin-left: 0;
+        }
+        
+        footer d{
+            text-align: left;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        #tabela{
+    width:100%;
+    border:solid 1px;
+    text-align:left;
+    border-collapse:collapse;
+}
+ 
+#tabela tbody tr{
+    border:solid 1px;
+    height:20px;
+    cursor:pointer;
+}
+ 
+#tabela thead{
+    background:beige;
+}
+ 
+#tabela thead th:nth-child(1){
+    width:100px;
+}
+ 
+#tabela input{
+    color:navy;
+    width:100%;
+}
+    #img_icon {                            /* Imagem do ícone para exibir/esconder o Menu (com Javascript)... */
+        max-width: 35px;
+    }
+        legend{
+            color: #5f7c8a;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> 
+            <img id="logo" src="logo.png" width="100" alt="Logo" title="Nosso Logo" />
+        LocalEasy</h1>
+    </header>
+         <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="profissional.html">Profissional</a></li>
+                <li><a href="contratante.html">Contratante</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    <section id="section">
+        <fieldset id="fild">
+            <legend>Perfil de Usuário</legend>
+            <img src="ftperfil.jpg" id="img">
+            <p>Nome: <input type="text" id="txt" value="Nome Sobrenome" readonly="true"></p>
+            <p>E-mail: <input type="text" value="email@gmail.com" readonly="true"></p>
+            <p>Sexo: <input type="text" value="Masculino" readonly="true" style="width: 60px;"></p>
+            <p>Data de nascimento: <input type="date" value="14 de outubro de 2000"  readonly="true"></p>
+            <a href="filtro.html"><button style="background: #5f7c8a; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px;">editar informações</button></a>
+        </fieldset>
+        <fieldset id="fild">
+            <legend>Localidade do Usuário</legend>
+            <p>Estado: <input type="text" value="São Paulo" readonly="true" ></p>
+            <p>Cidade: <input type="text" value="São Paulo" readonly="true"> </p>
+            <p>Rua: <input type="text" Value="rua......" readonly="true"> </p>
+            <p>Numero: <input type="text" value="123" readonly="true" style="width:40px;" ></p>
+            <a href="filtro.html"><button style="background: #5f7c8a; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px;">editar informações</button></a>
+        </fieldset>
+        <fieldset id="fild">
+            <legend>Ocupação</legend>
+            <p>Categoria: <input type="text" value="Assitência Técnica" readonly="true"> </p>
+            <p>Ramo: <input type="text" value="Desenvolvedor de Software" style="width: 200px;" readonly="true"></p>
+            <p>Especialidade: <input type="text" value="HTML, CSS, PHP, JAVASCRIPT" style="width: 200px;" readonly="true"></p>
+            <p>Horário de Disponibilidade: <input type="text" value="Noite" readonly="true" style="width: 70px;"></p>
+            <a href="filtro.html"><button style="background: #5f7c8a; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px;">editar informações</button></a>
+        </fieldset>
+    </section>
+    <p style="font-size: 25px;"><strong>Propostas de Contratantes</strong></p>
+     <div id="divConteudo">
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Contratante</th>
+                    <th>Período mensal</th>
+                    <th>Dias de trabalho</th>
+                    <th>Valor/hora</th>
+                    <th>Contactar</th>
+                </tr>
+                <tr>
+                    <th><input type="text" id="txtColuna1"/></th>
+                    <th><input type="text" id="txtColuna2"/></th>
+                    <th><input type="text" id="txtColuna3"/></th>
+                    <th><input type="range" list="tickmarks">
+                            <datalist id="tickmarks">
+                                <option value="0">
+                                <option value="10">
+                                <option value="20">
+                                <option value="30">
+                                <option value="40">
+                                <option value="50">
+                                <option value="60">                                   <option value="70">
+                                <option value="80">
+                                <option value="90">
+                                <option value="100">
+                            </datalist></th>
+                </tr>            
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laura</td>
+                    <td>1 mês</td>
+                    <td>Final de semana</td>
+                    <td>60</td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Chat</button></a></td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>3 meses</td>
+                    <td>Feriado</td>
+                    <td>40</td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Chat</button></a></td>
+                </tr>            
+                <tr>
+                    <td>José</td>
+                    <td>2 meses</td>
+                    <td>Dias Úteis</td>
+                    <td>20</td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Chat</button></a></td>
+                </tr>
+                <tr>
+                   <td>Pedro</td>
+                    <td>3 meses</td>
+                    <td>Dias Úteis</td>
+                    <td>50</td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Chat</button></a></td>
+                </tr>
+                <tr>
+                   <td>Mário</td>
+                    <td>6 meses</td>
+                    <td>Feriado</td>
+                    <td>70</td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Chat</button></a></td>
+                </tr>  
+                <tr>
+                   <td>João</td>
+                    <td>5 meses</td>
+                    <td>Final de Semana</td>
+                    <td>40</td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Chat</button></a></td>
+                </tr> 
+            </tbody>
+        </table>
+        <p style="font-size: 25px;"><strong>Contratações</strong></p>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Contratante</th>
+                    <th>Período mensal</th>
+                    <th>Dias de trabalho</th>
+                    <th>Status</th>
+                    <th>Contrato</th>
+                </tr>
+                <tr>
+                    <th><input type="text" id="txtColuna1"/></th>
+                    <th><input type="text" id="txtColuna2"/></th>
+                    <th><input type="text" id="txtColuna3"/></th>
+                    <th><input type="text" id="txtColuna4"/></th>
+                </tr>            
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laura</td>
+                    <td>1 mês</td>
+                    <td>Final de semana</td>
+                    <td>Em Andamento</td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Contrato</button></a></td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>3 meses</td>
+                    <td>Feriado</td>
+                    <td>Concluído</td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Contrato</button></a></td>
+                </tr>            
+            </tbody>
+        </table>
+        <tr> </tr>
+    </div>
+   <p>
+        <a style="background: red; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px;" href="home.html">Logout</a>
+            </p>  
+    <footer>
+        <h3>Contatos</h3>
+        <dl>
+            <dt>email</dt>
+            <dd>email@email.com</dd>
+            <dt>telefone</dt>
+            <dd>(11)99999-9999</dd>
+        </dl>
+        <p>@LocalEasy</p>
+    </footer>
+</body>
+    <script>
+    $(function(){
+    $("#tabela input").keyup(function(){       
+        var index = $(this).parent().index();
+        var nth = "#tabela td:nth-child("+(index+1).toString()+")";
+        var valor = $(this).val().toUpperCase();
+        $("#tabela tbody tr").show();
+        $(nth).each(function(){
+            if($(this).text().toUpperCase().indexOf(valor) < 0){
+                $(this).parent().hide();
+            }
+        });
+    });
+ 
+    $("#tabela input").blur(function(){
+        $(this).val("");
+    });
+});    
+    </script>
+    
+    <script>
+     session_start();
+        $token = md5(session_id());
+        if(isset($_GET['token']) && $_GET['token'] === $token) {
+                // limpe tudo que for necessário na saída.
+                // Eu geralmente não destruo a seção, mas invalido os dados da mesma
+                // para evitar algum "necromancer" recuperar dados. Mas simplifiquemos:
+        session_destroy();
+        header("location: http://exemplo.com.br/index.php");
+            exit();
+        } else {
+            echo '<a href="doLogout.php?token='.$token.'>Confirmar logout</a>';
+        }
+    </script>
+</html>

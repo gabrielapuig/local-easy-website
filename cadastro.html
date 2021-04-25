@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<style>
+        *{
+        box-sizing: border-box;
+        }
+        body{
+            font-family: arial, helvetica;
+            margin: 0;
+            background: #f1f1f1;
+        }
+        header {
+            text-align: center;
+            background: rgb(182, 3, 107);
+            padding: 30px;
+        }
+        
+        header h1{
+            font-size: 50px;
+            color: white;
+        }
+        
+        nav ul{
+            list-style-type: none;
+            background-color: #5f7c8a; 
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a{
+             color:white;
+            text-decoration: none;
+            padding: 16px;
+            display: block;
+        }
+        
+        nav li{
+            float:left;
+        }
+        
+        nav a:hover{
+            background-color: white;
+            color: #5f7c8a;
+        }
+    #usuario{
+        width: 800px;
+        background-color: white;
+    }
+    #sexo{
+        width: 20%;
+        background-color: white;
+    }
+    #endereço{
+        width: 800px;
+        background-color: white;
+    }
+    #profissao{
+        width: 800px;
+        background-color: white;
+    }
+    #perfil{
+        width: 800px;
+        background-color: white;
+    }
+    #ccurriculo{
+        width: 800px;
+        background-color: white;
+    }
+    h1{
+        color: white;
+    }
+    form button{
+        width:100%;
+        height:45px;
+        cursor: pointer;
+        background-color: #5f7c8a;
+        color: white;
+        border-radius: 3px 3px ;
+    }
+    section{
+            float: left;
+            width: 75%;
+        }
+    #logo{
+            width: 10%;
+            height: auto;
+            float: left;
+        }
+    #pessoafisica{
+        width: 800px;
+        background-color: white;
+    }
+    #cadastronac{
+        width: 800px;
+        background-color: white;
+    }
+    #form {
+        margin-left: 25%;
+    }
+</style>
+<body>
+    <div id="interface">
+        <header>
+        <img id="logo" src="img/logo.png" width="100" alt="Logo" title="Nosso Logo" />
+        <h1>LocalEasy</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="profissional.html">Profissional</a></li>
+                <li><a href="contratante.html">Contratante</a></li>
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+       <form id="form"> 
+           <fieldset id="usuario">
+            <h3>Dados do Usuario</h3>
+                <input onclick="habilitaCamposContratado()" type="radio" name="tsexo" id="ContratadoCheck" /> 
+                <label for="cmasc">Contratante</label><br/>
+                <input onclick="habilitaCamposContratante()" type="radio" name="tsexo" id="ContratanteCheck" /> 
+                <label for="cfem">Contratado</label>
+                <p id="NomeUsuarioLable">Nome Usuário:<input type="text" name="tname" id="TxtNome" size="20" maxlength="40" placeholder="Nome Completo" style="display: none;"/></p>
+                <p>Nome Empresa:<input type="text" name="tname" id="TxtNomeEmpresa" size="20" maxlength="40" placeholder="Nome Empresa" style="display: none;"/></p>
+                <p>CNPJ:<input type="text" name="tcnpj" id="TxtCnpj" size="20" placeholder="CNPJ" style="display: none;"/></p>
+               <p>Razão Social:<input type="text" name="tname" id="Txtrazaosocial" size="20" maxlength="40" placeholder="Nome Empresa" style="display: none;"/></p> 
+               <p>Ramo da Atividade:<input type="text" name="tname" id="Txtramodaatividade" size="20" maxlength="40" placeholder="Nome Empresa" style="display: none;"/></p>
+                <p>E-mail:<input type="email" name="temail" id="cemail" size="30" placeholder="digite seu e-mail" /></p>
+                <p>senha:<input type="password" name="tsenha" id="csenha" size="16" maxlength="16" placeholder="digite a senha" /></p>       
+            <script type="text/javascript">
+                
+              </script>
+            <fieldset id="sexo" style="display: none;">
+                <legend>sexo</legend>
+                <input type="radio" name="tsexo" id="cmasc" /> 
+                <label for="cmasc">Masculino</label><br/>
+                <input type="radio" name="tsexo" id="cfem" /> 
+                <label for="cfem">Feminino</label>
+            </fieldset>
+                <p>Data de Nascimento:<input type="date" name="tdate" id="cdate" placeholder="Data de Nascimento"/></p>
+            </fieldset>
+            <fieldset id="endereço">
+                <H3>Endereço do Usuário </H3>
+                <p><label for="cest" >Estado:</label>
+                    <select name="test" id="cest">
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Minas Gerais</option>
+                        <option>Santa Catarina</option>
+                    </select>
+                </p>
+                <p>Cidade:<input type="text" name="tcidade" id="ccidade" size="15" placeholder="sua cidade" /></p>
+                <p>Rua:<input type="text" name="trua" id="crua" size="15" placeholder="nome da rua" /></p>
+                <p>Numero:<input type="number" name="tnum" id="cnum" min="0"max="99999" /></p>
+            </fieldset>
+            <fieldset id="profissao"> 
+                <h3>Ocupação</h3>
+                <fieldset id="ocupacao">
+                <p>Categoria:<input type="text" name="tprof" id="cprof" size="20" placeholder="profissão"/></p>
+                <p>Ramo:<input type="text" name="tesp" id="cesp" size="20" placeholder="especialidade"/></p>
+                <p>Especialidade:<input type="text" name="careaSol" id="careaSol" size="20" placeholder="Nome da Empresa"/></p>
+                <p><label for="chor">Horario de Disponibilidade:</label>
+                    <select name="thor" id="chor">
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                        <option>qualquer horario</option>
+                    </select>
+                </p>
+           </fieldset>
+           </fieldset>
+            <fieldset id="pessoafisica"> 
+                <h3>Cadastro Nacional de Pessoa Física</h3>
+                <fieldset id="cadastronac">
+                <p>Número de incrição:<input type="text" name="tprof" id="cprof" size="20" placeholder="**.***.***/****.**"/></p>
+                <p>Codigo e Descrição da Atividade Economica Principal:<input type="text" name="tesp" id="cesp" size="20" placeholder="*********"/></p>
+                <p>Codigo e Descrição da Atividade Economica Secundarias: <input type="text" name="careaSol" id="careaSol" size="20" placeholder="*********"/></p>
+                <p>Codigo e descrição da Natureza Juridica:<input type="text" name="tesp" id="cesp" size="20" placeholder="especialidade"/>
+                </p>
+           </fieldset>
+           </fieldset>
+           <fieldset id="perfil"> 
+                <h3>Insira uma foto de perfil</h3>
+                <p><input id="file" name="file" type="file" class="file_customizada" /></p>
+           </fieldset>
+           <fieldset id="ccurriculo"> 
+                <h3>Insira seu currículo</h3>
+                <p><input id="file" name="file" type="file" class="file_customizada" /></p>
+           </fieldset>
+           <fieldset id="ccurriculo"> 
+                <button id="enviar" onclick="pegar();">Enviar</button>
+           </fieldset>
+        </form>
+    </section>
+</body>
+    <script>
+    function pegar(botao){
+        window.open('Pcontra.html');
+    }
+
+    function showContratante() {
+    document.getElementById("sexo").style.display= "none";
+    document.getElementById("TxtNome").style.display= "block";
+    document.getElementById("TxtNomeEmpresa").style.display= "block";
+    document.getElementById("Txtrazaosocial").style.display= "block";
+    document.getElementById("Txtramodaatividade").style.display= "block";
+    document.getElementById("cdate").style.display= "none";
+    document.getElementById("TxtCnpj").style.display= "block";
+    document.getElementById("ccurriculo").style.display= "none";
+    document.getElementById("profissao").style.display= "none";
+    document.getElementById("pessoafisica").style.display= "block";
+    }
+    function showContratado() {
+    document.getElementById("sexo").style.display= "block";
+    document.getElementById("TxtNome").style.display= "block";
+    document.getElementById("TxtNomeEmpresa").style.display= "none";
+    document.getElementById("Txtrazaosocial").style.display= "none";
+    document.getElementById("Txtramodaatividade").style.display= "none";
+    document.getElementById("cdate").style.display= "block";
+    document.getElementById("TxtCnpj").style.display= "none";
+    document.getElementById("ccurriculo").style.display= "block";
+    document.getElementById("profissao").style.display= "block";
+    document.getElementById("pessoafisica").style.display= "none";
+    }
+
+    function ClearFields(){
+
+
+    }
+    function habilitaCamposContratante() {
+        showContratado();         
+    }              
+
+    function habilitaCamposContratado(){
+        showContratante();
+        ClearFields();
+
+    }
+    
+    $(document).ready(function() {
+
+    $('input[type="radio"]').change(function(event) {
+        var tsexo = $('input[name="tsexo"]').filter(':checked').val();
+        var tname = $('input[name="tname"]').filter(':checked').val();
+        getForm(tsexo, tname)
+
+    });
+
+    // Traz o form
+    function getForm(option1, option2){
+        console.log(option1);
+        console.log(option2);
+
+        if (option1 == 'Contratante') {
+            // entra na area do contratante
+        }
+
+        if (option1 === 'Contratado') {
+            // entra na area do profissional
+        }
+    }
+
+});
+
+    </script>
+</html>

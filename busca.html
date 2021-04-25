@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+        }
+        body{
+            background-color: #f1f1f1;
+            font-family: 'arial';
+        }
+        .item{
+            width: 400px;
+            height: auto;
+            margin: 100px auto;
+        }
+        .item label{
+            display: block;
+            padding: 10px;
+            background-color: #434343;
+            font-size: 20px;
+            cursor: pointer;
+            color: #fff;
+            border-bottom: solid 2px #aaa;
+        }
+        .item label:hover{
+            background-color: #f2673a;
+        }
+        .item ul{
+            width: 100%;
+            list-style: none;
+            overflow: hidden;
+            max-height: 0;
+            transition: all .4s linear; 
+        }
+        .item input{
+            display: none;
+        }
+        .item ul li a{
+            width: 100%;
+            height: 20px;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            background-color: #fafafa;
+            color: #333;
+            border-bottom: solid 2px #aaa;
+        }
+        .item ul li a:hover{
+            background-color: #9cf;
+        }
+        .item input:checked ~ ul{
+            height: auto;
+            max-height: 200px;
+            transform: all;
+        }
+        
+        header {
+            text-align: center;
+            background: rgb(182, 3, 107);
+            padding: 30px;
+        }
+        
+        header h1{
+            font-size: 50px;
+            color: white;
+        }
+        
+        .menu ul{
+            list-style-type: none;
+            background-color: #5f7c8a; 
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .menu a{
+             color:white;
+            text-decoration: none;
+            padding: 16px;
+            display: block;
+        }
+        
+        .menu li{
+            float:left;
+        }
+        
+        .menu a:hover{
+            background-color: white;
+            color: #5f7c8a;
+        }
+        #logo{
+            width: 10%;
+            height: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/logo.png" width="100" alt="Logo" title="Nosso Logo" />
+        <h1>LocalEasy</h1>
+    </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Busca</a></li>
+                <li><a href="profissional.html">Profissional</a></li>
+                <li><a href="contratante.html">Contratante</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <div class="item">
+                <input type="checkbox" id="check1">
+                <label for="check1"> assistencia e tecnologia </label>
+                <ul>
+                    <li><a href="">TV</a></li>
+                    <li><a href="">Computador</a></li>
+                    <li><a href="">Edição áudio e vídeo</a></li>
+                    <li><a href="Resultado.html">Desenvolvedor de software</a></li>
+                    <li><a href="">Técnico de informática</a></li>
+                </ul>
+            </div> 
+            <div class="item">
+                <input type="checkbox" id="check2">
+                <label for="check2"> casa e serviços </label>
+                <ul>
+                    <li><a href="">Chaveiro</a></li>
+                    <li><a href="">Marceneiro</a></li>
+                    <li><a href="">Dedetização</a></li>
+                    <li><a href="">Transportador de mudança</a></li>
+                    <li><a href="">Jardeneiro</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="check3">
+                <label for="check3"> aulas particulares </label>
+                <ul>
+                    <li><a href="">Dança</a></li>
+                    <li><a href="">Esportes e luta</a></li>
+                    <li><a href="">Idiomas</a></li>
+                    <li><a href="">Música</a></li>
+                    <li><a href="">Reforço escolas/ENEM</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="check4">
+                <label for="check4"> automoveis </label>
+                <ul>
+                    <li><a href="">Alarme automotivo</a></li>
+                    <li><a href="">Mecânica geral</a></li>
+                    <li><a href="">Borracharia</a></li>
+                    <li><a href="">Pintura automotiva</a></li>
+                    <li><a href="">Guicho</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="check5">
+                <label for="check5"> beleza e moda </label>
+                <ul>
+                    <li><a href="">Cabeleireiro</a></li>
+                    <li><a href="">Depilação</a></li>
+                    <li><a href="">Costureira</a></li>
+                    <li><a href="">Personal trainer</a></li>
+                    <li><a href="">Sapateiro</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="check6">
+                <label for="check6"> construção e reforma </label>
+                <ul>
+                    <li><a href="">Pintor</a></li>
+                    <li><a href="">Eletricista</a></li>
+                    <li><a href="">Vidraceiro</a></li>
+                    <li><a href="">Carpinteiro</a></li>
+                    <li><a href="">Encanador</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="check7">
+                <label for="check7"> festas e eventos </label>
+                <ul>
+                    <li><a href="">Garçom</a></li>
+                    <li><a href="">Decorador de eventos</a></li>
+                    <li><a href="">Bartender</a></li>
+                    <li><a href="">Filmagem</a></li>
+                    <li><a href="">Animador de festas</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="check8">
+                <label for="check8"> serviços domesticos </label>
+                <ul>
+                    <li><a href="">Diarista</a></li>
+                    <li><a href="">Babá</a></li>
+                    <li><a href="">Dog Walker</a></li>
+                    <li><a href="">Cuidador de Idosos</a></li>
+                    <li><a href="">Motorista Particular</a></li>
+                </ul>
+            </div>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Contratante</title>
+    <style>
+        *{
+            padding: 5;
+            margin: 3;
+        }
+        body{
+            font-family: arial, helvetica;
+            margin: 0;
+            background: #f1f1f1;
+        }
+        #fild{
+            width: 800px;
+            margin-left: 17%;
+        }
+        header {
+            text-align: center;
+            background: rgb(182, 3, 107);
+            padding: 30px;
+        }
+        
+        header h1{
+            font-size: 50px;
+            color: white;
+        }
+        
+        nav ul{
+            list-style-type: none;
+            background-color: #5f7c8a; 
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a{
+             color:white;
+            text-decoration: none;
+            padding: 16px;
+            display: block;
+        }
+        
+        nav li{
+            float:left;
+        }
+        
+        nav a:hover{
+            background-color: white;
+            color: #5f7c8a;
+        }
+        img#logo {
+            width:10%;
+            height: auto;
+        }
+        footer{
+            padding: 20px;
+            background: #5f7c8a;
+            color: white;
+            padding-top: 20px;
+            
+        }
+        
+        footer dl, footer p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        footer dt{
+            font-weight: bold;
+        }
+        
+        footer dd{
+            margin-left: 0;
+        }
+        
+        footer d{
+            text-align: left;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        legend{
+            color: #5f7c8a;
+            font-size: 30px;
+         
+        }
+        #tabela{
+            width:100%;
+            border:solid 1px;
+            text-align:left;
+            border-collapse:collapse;
+        }
+
+        #tabela tbody tr{
+            border:solid 1px;
+            height:20px;
+            cursor:pointer;
+        }
+
+        #tabela thead{
+            background:beige;
+        }
+
+        #tabela thead th:nth-child(1){
+            width:100px;
+        }
+
+        #tabela input{
+            color:red;
+            width:100%;
+        }
+            #img_icon {                            /* Imagem do ícone para exibir/esconder o Menu (com Javascript)... */
+                max-width: 35px;
+            }
+
+        * {
+            font-family:Consolas
+        }
+
+        .tabelaEditavel {
+            border:solid 1px;
+            width:100%
+        }
+
+        .tabelaEditavel td {
+            border:solid 1px;
+        }
+
+        .tabelaEditavel .celulaEmEdicao {
+            padding: 0;
+        }
+
+        .tabelaEditavel .celulaEmEdicao input[type=text]{
+            width:100%;
+            border:0;
+            background-color:rgb(255,253,210);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> 
+            <img id="logo" src="logo.png" width="100" alt="Logo" title="Nosso Logo" />
+        LocalEasy</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="profissional.html">Profissional</a></li>
+                <li><a href="contratante.html">Contratante</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <section>
+            <fieldset id="fild">
+                <legend>Dados da empresa</legend>
+                <img src="ftperfil.jpg" id="img">
+                <p>Razão Social: <input type="text" id="txt" value="Empresa X" readonly="true"></p>
+                <p>data de Abertura: <input type="date" value=""  readonly="true"></p>
+                <p>E-mail: <input type="text" value="empresaXXXX@gmail.com" readonly="true"></p>
+                <p>telefone: <input type="text" value="(99) 9999-9999" readonly="true" style="width: 100px;"></p>
+                <p>Ramo de Atividade: <input type="text" value="venda e aluguel" readonly="true"></p>
+                <a href="filtro.html"><button style="background: #5f7c8a; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px;">editar informações</button></a>
+            </fieldset>
+            <fieldset id="fild">
+                <legend>Cadastro Nacional de Pessoa Fisica</legend>
+                <p>Nº de inscrição: <input type="text" id="txt" value="00.112.112/0001.39" readonly="true"></p>
+                <p>Codigo e Descrição da Atividade Economica Principal: <input type="text" value="*********"  readonly="true"></p>
+                <p>Codigo e Descrição da Atividade Economica Secundarias: <input type="text" value="Não informado" readonly="true"></p>
+                <p>Codigo e descrição da Natureza Juridica: <input type="text" value="********" readonly="true" style="width: 60px;"></p>
+                <a href="filtro.html"><button style="background: #5f7c8a; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px;">editar informações</button></a>
+            </fieldset>
+            <fieldset id="fild">
+                <legend>Localidade do Usuário</legend>
+                    <p>Estado: <input type="text" value="São Paulo" readonly="true" ></p>
+                    <p>Cidade: <input type="text" value="São Paulo" readonly="true"> </p>
+                    <p>Rua: <input type="text" Value="rua......" readonly="true"> </p>
+                    <p>Numero: <input type="text" value="123" readonly="true" style="width:40px;" ></p>
+                    <a href="filtro.html"><button style="background: #5f7c8a; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px;">editar informações</button></a>
+            </fieldset>
+        </section>
+        <p style="font-size: 25px;"><strong>Propostas Enviadas de Contratação</strong></p>
+    <div id="divConteudo">
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Prof. Lib.</th>
+                    <th>Status</th>
+                    <th>Início da contratação</th>
+                    <th>Fim da contratação</th>
+                    <th>Contrato</th>
+                    <th>Contactar</th>
+                </tr>
+                <tr>
+                    <th><input type="text" id="txtColuna1"/></th>
+                    <th><input type="text" id="txtColuna2"/></th>
+                     <th><input id="date" type="date" value="2017-06-01"></th>
+                    <th><input id="date" type="date" value="2017-06-01"></th>
+                </tr>            
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jaqueline</td>
+                    <td>ACEITO</td>
+                    <td>04 dezembro 2020</td>
+                    <td>04 janeiro 2020</td>
+                    <td><input type="button" value="Criar PDF" id="btnImprimir" onclick="CriaPDF()" /></td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Chat</button></a></td>
+                </tr>
+                <tr>
+                    <td>Emanuel</td>
+                    <td>AGUARDADO</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> <a href="https://www.napratica.org.br/curriculo-para-primeiro-emprego/"><button>Chat</button></a></td>
+                </tr>            
+                
+            </tbody>
+        </table>
+        <p style="font-size: 25px;"><strong>Contratações Atuais</strong></p>
+        <div id="divConteudo">
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Prof. Lib.</th>
+                    <th>Período mensal</th>
+                    <th>Dias</th>
+                    <th>Tempo Restante</th>
+                    <th>Contrato</th>
+                </tr>
+                <tr>
+                    <th><input type="text" id="txtColuna1"/></th>
+                    <th><input type="text" id="txtColuna2"/></th>
+                    <th><input type="text" id="txtColuna3"/></th>
+                    <th><input type="text" id="txtColuna4"/></th>
+                </tr>            
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jaqueline</td>
+                    <td>3 mese</td>
+                    <td>Final de semana</td>
+                    <td>1 mês</td>
+                    <td><input type="button" value="Mostrar PDF" id="btnImprimir" onclick="CriaPDF()" /></td>
+                </tr>
+                <tr>
+                    <td>Gabriel</td>
+                    <td>2 meses</td>
+                    <td>Dias úteis</td>
+                    <td>1 mês</td>
+                    <td><input type="button" value="Mostrar PDF" id="btnImprimir" onclick="CriaPDF()" /></td>
+                </tr>            
+                
+            </tbody>
+        </table>
+            <p style="font-size: 25px;"><strong>Contratações Concluídas</strong></p>
+        <table class="tabelaEditavel">
+        <thead>
+            <tr>
+                <th>Prof. Lib.</th>
+                <th>Avaliação</th>
+                <th>Observações</th>
+                <td>Contrato</td>
+            </tr>     
+        </thead>
+        <tbody>
+            <tr>
+                <td>Joel</td>
+                <td><select name="avaliaçao">
+                        <option value="exelente">Excelente</option> 
+                            <option value="muito Bom" selected>Muito Bom</option>
+                            <option value="Bom">Bom</option>
+                            <option value="Ruim">Ruim</option>
+                             <option value="Muito Ruim">Muito ruim</option>
+                    </select>
+                    </td>
+                <td>Responsável</td>
+                <td><input type="button" value="Mostrar PDF" id="btnImprimir" onclick="CriaPDF()" /></td>
+            </tr>
+            <tr>
+                <td>Kesley</td>
+                <td><select name="avaliaçao">
+                        <option value="exelente">Excelente</option> 
+                            <option value="muito Bom" >Muito Bom</option>
+                            <option value="Bom">Bom</option>
+                            <option value="Ruim"selected>Ruim</option>
+                             <option value="Muito Ruim">Muito ruim</option>
+                    </select>
+                    </td>
+                <td>Chega atrasado quase todo dia</td>
+                 <td><input type="button" value="Mostrar PDF" id="btnImprimir" onclick="CriaPDF()" /></td>
+            </tr>
+        </tbody>
+    </table>
+            <p>
+        <a style="background: red; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px;" href="home.html">Logout</a>
+            </p>
+        </div>
+        <footer>
+            <h3>Contatos</h3>
+            <dl>
+                <dt>email</dt>
+                <dd>email@email.com</dd>
+                <dt>telefone</dt>
+                <dd>(11)99999-9999</dd>
+            </dl>
+            <p>@LocalEasy</p>
+        </footer>
+    </div>
+</body>
+    <script>
+    $(function(){
+    $("#tabela input").keyup(function(){       
+        var index = $(this).parent().index();
+        var nth = "#tabela td:nth-child("+(index+1).toString()+")";
+        var valor = $(this).val().toUpperCase();
+        $("#tabela tbody tr").show();
+        $(nth).each(function(){
+            if($(this).text().toUpperCase().indexOf(valor) < 0){
+                $(this).parent().hide();
+            }
+        });
+    });
+ 
+    $("#tabela input").blur(function(){
+        $(this).val("");
+    });
+});    
+    </script>
+    
+    <script>
+     session_start();
+        $token = md5(session_id());
+        if(isset($_GET['token']) && $_GET['token'] === $token) {
+                // limpe tudo que for necessário na saída.
+                // Eu geralmente não destruo a seção, mas invalido os dados da mesma
+                // para evitar algum "necromancer" recuperar dados. Mas simplifiquemos:
+        session_destroy();
+        header("location: http://exemplo.com.br/index.php");
+            exit();
+        } else {
+            echo '<a href="doLogout.php?token='.$token.'>Confirmar logout</a>';
+        }
+    </script>
+    <script>
+    function CriaPDF() {
+        var minhaTabela = document.getElementById('tabela').innerHTML;
+        var style = "<style>";
+        style = style + "table {width: 100%;font: 20px Calibri;}";
+        style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style = style + "padding: 2px 3px;text-align: center;}";
+        style = style + "</style>";
+        // CRIA UM OBJETO WINDOW
+        var win = window.open('', '', 'height=700,width=700');
+        win.document.write('<html><head>');
+        win.document.write('<title>Empregados</title>');   // <title> CABEÇALHO DO PDF.
+        win.document.write(style);                                     // INCLUI UM ESTILO NA TAB HEAD
+        win.document.write('</head>');
+        win.document.write('<body>');
+        win.document.write(minhaTabela);                          // O CONTEUDO DA TABELA DENTRO DA TAG BODY
+        win.document.write('</body></html>');
+        win.document.close(); 	                                         // FECHA A JANELA
+        win.print();                                                            // IMPRIME O CONTEUDO
+    }
+</script>
+    <script>
+    var dateControl = document.querySelector('input[type="date"]');
+dateControl.value = '2017-06-01';
+    </script>
+    <script>
+    $(function () {
+    $("td").dblclick(function () {
+        var conteudoOriginal = $(this).text();
+
+        $(this).addClass("celulaEmEdicao");
+        $(this).html("<input type='text' value='" + conteudoOriginal + "' />");
+        $(this).children().first().focus();
+
+        $(this).children().first().keypress(function (e) {
+            if (e.which == 13) {
+                var novoConteudo = $(this).val();
+                $(this).parent().text(novoConteudo);
+                $(this).parent().removeClass("celulaEmEdicao");
+            }
+        });
+
+	$(this).children().first().blur(function(){
+		$(this).parent().text(conteudoOriginal);
+		$(this).parent().removeClass("celulaEmEdicao");
+	});
+    });
+});
+    </script>
+</html>

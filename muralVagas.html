@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural</title>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: arial, helvetica;
+            padding-top: 5px;
+            background: #f1f1f1;
+        }
+        
+        header {
+            text-align: center;
+            background: rgb(182, 3, 107);
+            padding: 30px;
+        }
+        
+        header h1{
+            font-size: 50px;
+            color: white;
+        }
+        
+        nav ul{
+            list-style-type: none;
+            background-color: #5f7c8a; 
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a{
+             color:white;
+            text-decoration: none;
+            padding: 16px;
+            display: block;
+        }
+        
+        nav li{
+            float:left;
+        }
+        
+        nav a:hover{
+            background-color: white;
+            color: #5f7c8a;
+        }
+        
+        img{
+            width: 100%        
+        }
+        
+        .row{
+            padding: 0 200px;
+            display: table;
+        }
+        
+        section{
+            float: left;
+            width: 75%;
+        }
+        
+        aside{
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+        }
+        
+        .card{
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        footer{
+            padding: 20px;
+            background: #5f7c8a;
+            color: white;
+            padding-top: 20px;
+            display: table;
+            width: 1000px;
+            min-width: 100%;
+        }
+        
+        footer dl, footer p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        footer dt{
+            font-weight: bold;
+        }
+        
+        footer dd{
+            margin-left: 0;
+        }
+        
+        footer d{
+            text-align: left;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        button{
+            width:100%;
+            height:45px;
+            cursor: pointer;
+            background-color: #5f7c8a;
+            color: white;
+            border-radius: 3px 3px ;
+        }
+        img#logo {
+        width:10%;
+        height: auto;
+        }
+            
+        a#home {
+            text-decoration: none; 
+        }
+               
+                .campo {
+                    padding: 5px;
+                    margin: 5px;
+
+                }
+                #fild{
+                    height: auto;
+                    padding-top: 3px;
+                    border-width:4px;
+                    padding:2em;
+                }
+                #carreira{
+                    padding: 3px;
+                    margin-left: 2px;
+                    margin-bottom: 6px;
+                }
+                #ldt {
+                    padding: 3px;
+                    margin-left: 2px;
+                    margin-bottom: 15px;
+                }
+                #loc{
+                    padding: 3px;
+                    margin-left: 2px;
+                    margin-bottom: 15px;
+                }
+                #img {
+                    max-width: 20%;
+                    height: auto;
+                    float: right;
+                    margin-right: 2%;
+                                 /* Efeitos de Bordas incluídos... */
+                    border-radius: 5px;
+                    margin-top: 2px;
+                }
+        #inf {
+            height: auto;
+            margin-bottom: 10%;
+            padding: 5px;
+            box-shadow: 3px 3px rgb(65, 60, 60);
+            border-radius: 5px 5px;
+        }
+        #bot {
+            background-color: red;
+            height: 35px;
+            width: 100px;
+            margin-left: 5%;
+            border-radius: 3px 3px;
+            color: white;
+        }
+        #bot1 {
+            height: 35px;
+            width: 100px;
+            margin-left: 5%;
+            border-radius: 3px 3px;
+        }
+        #tit{
+            color:red;
+        }
+        #fild{
+            height: auto;
+            padding-top: 3px;
+            border-width:4px;
+            padding:2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> 
+            <img id="logo" src="logo.png" width="100" alt="Logo" title="Nosso Logo" />
+        LocalEasy</h1>
+    </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="profissional.html">Profissional</a></li>
+                <li><a href="contratante.html">Contratante</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    <div class="row">
+        <section>
+            <fieldset id="fild">
+                <div>
+                    <label for="ldt">Categoria:</label>
+                    <select id="ldt" class="texto">
+                        <option value="AT">Assistência e Tecnologia</option>
+                        <option value="CS">Casa e Serviços</option>
+                        <option value="AP">Aulas Particulares</option>
+                        <option value="AUT">automóveis</option>
+                        <option value="BM">Beleza e Moda</option>
+                        <option value="CR">Constrção e Reforma</option>
+                        <option value="FE">Festas e Eventos</option>
+                        <option value="SD">Serviços Domésticos</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ldt">Ramo:</label>
+                    <select id="ldt" class="texto">
+                        <option value="Manhã">TV</option>
+                        <option value="Tarde">Computador</option>
+                        <option value="Noite">Edição áudio e vídeo</option>
+                        <option value="Manhã">Desenvolvedor de Software</option>
+                        <option value="Tarde">Técnico de Informática</option>
+                        <option value="Noite">Chaveiro</option>
+                        <option value="Manhã">Marcineiro</option>
+                        <option value="Tarde">Dedetização</option>
+                        <option value="Noite">Transporte e Mudança</option>
+                        <option value="Manhã">Jardineiro</option>
+                        <option value="Tarde">Dança</option>
+                        <option value="Noite">Esportes e Luta</option>
+                        <option value="Manhã">Idiomas</option>
+                        <option value="Tarde">Música</option>
+                        <option value="Noite">Reforço Escolas/ENEM</option>
+                        <option value="Manhã">Alarme Automotivo</option>
+                        <option value="Tarde">Mecânica Geral</option>
+                        <option value="Noite">Borracharia</option>
+                        <option value="Manhã">Pintura Automotiva</option>
+                        <option value="Tarde">Guincho</option>
+                        <option value="Noite">Cabeleireiro</option>
+                        <option value="Manhã">Depilação</option>
+                        <option value="Tarde">Costureira</option>
+                        <option value="Noite">Personal Trainer</option>
+                        <option value="Manhã">Sapateiro</option>
+                        <option value="Tarde">Pintor</option>
+                        <option value="Noite">Eletricista</option>
+                        <option value="Manhã">Vidraceiro</option>
+                        <option value="Tarde">Carpinteiro</option>
+                        <option value="Noite">Encanador</option>
+                         <option value="Manhã">Garçom</option>
+                        <option value="Tarde">Decorador de Eventos</option>
+                        <option value="Noite">Bartender</option>
+                        <option value="Manhã">Filmagem</option>
+                        <option value="Tarde">Animador de Festas</option>
+                        <option value="Noite">Diarista</option>
+                        <option value="Manhã">Babá</option>
+                        <option value="Tarde">Dog Walker</option>
+                        <option value="Noite">Cuidador de Idosos</option>
+                        <option value="Manhã">Motorista Particular</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="carera">Especialidade</label>
+                    <select id="carreira" class="texto">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="PHP">PHP</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ldt">Estado</label>
+                    <select id="ldt" class="texto">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="loc">Cidade</label>
+                    <select id="loc" class="texto">
+                        <option value="">Todas</option>
+                        <option value="Natal">Natal</option>
+                        <option value="Barueri">Barueri</option>
+                        <option value="Campinas">Campinas</option>
+                        <option value="Ribeirão Preto">Ribeirão Preto</option>
+                        <option value="Rio de Janeiro e São Paulo">Rio de Janeiro e São Paulo</option>
+                        <option value="São Caetano do Sul">São Caetano do Sul</option>
+                        <option value="Brasília">Brasília</option>
+                        <option value="Belo Horizonte">Belo Horizonte</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Florianópolis">Florianópolis</option>
+                        <option value="Salvador">Salvador</option>
+                        <option value="Osasco">Osasco</option>
+                        <option value="Curitiba">Curitiba</option>
+                        <option value="RIO CLARO">Rio Claro</option>
+                        <option value="SÃO PAULO">São Paulo</option>
+                        <option value="Cuiabá">Cuiabá </option>
+                        <option value="Teresina">Teresina</option>
+                        <option value="São José dos Campos">São José dos Campos</option>
+                        <option value=" São José dos Campos"> São José dos Campos</option>
+                        <option value="Barueri">Barueri</option>
+                        <option value="Indaiatuba">Indaiatuba</option>
+                        <option value="Aracaju">Aracaju</option>
+                        <option value="São Luís ">São Luís </option>
+                        <option value="Sao Paulo">Sao Paulo</option>
+                        <option value="São Luís">São Luís</option>
+                    </select>
+                    </div>
+                <a href=" "><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Filtrar</button></a>
+            </fieldset>
+            <div id="inf">
+                <img id="img" src="https://www.projetodraft.com/wp-content/uploads/2015/03/dressgo.png" />
+                <h2 id="tit">Beleza</h2>
+                <p>PatVestidos<br>Costureira<br>Rio de Janeiro, RJ</p>
+                <p>Estamos à procura de designer apaixonado e empreendedor com foco e UX para se juntar a nossa equipe. Como Designer de produto
+                    com foco em UX você orientará e implementará a experiência de nossos aplicativos, sites e canais digitais em geral com base 
+                    nas premissas de design e requisitos dos produtos.
+                </p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="candidatar-se" id="bot1">
+            </div>
+            <div id="inf">
+                <img id="img" src="https://img.cvpravc.com.br/cvpravc/empresas/vivo.jpg" />
+                <h2 id="tit">Assistência e Tecnologia</h2>
+                <p>Vivo Eletronica<br>Edição áudio e vídeo<br>São Paulo,SP</p>
+                <p>Estamos à procura de designer apaixonado e empreendedor com foco e UX para se juntar a nossa equipe. Como Designer de produto
+                    com foco em UX você orientará e implementará a experiência de nossos aplicativos, sites e canais digitais em geral com base 
+                    nas premissas de design e requisitos dos produtos.
+                </p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="candidatar-se" id="bot1">
+            </div>
+            <div id="inf">
+                <img id="img" src="https://cdn.leroymerlin.com.br/contents/logo_leroy_merlin_bae6_300x300.jpeg" />
+                <h2 id="tit">Casa e Serviços</h2>
+                <p>LeroyMerlin<br>Dedetização<br>Salvador,BA</p>
+                <p>Estamos à procura de designer apaixonado e empreendedor com foco e UX para se juntar a nossa equipe. Como Designer de produto
+                    com foco em UX você orientará e implementará a experiência de nossos aplicativos, sites e canais digitais em geral com base 
+                    nas premissas de design e requisitos dos produtos.
+                </p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="candidatar-se" id="bot1">
+            </div>
+            <div id="inf">
+                <img id="img" src="https://studiodedancavaniamolla.com.br/wp-content/uploads/2016/08/logotipo.png" />
+                <h2 id="tit">Aulas Particulares</h2>
+                <p>Studio Vania Molla<br>Dança<br>Goiás, GO</p>
+                <p>Estamos à procura de designer apaixonado e empreendedor com foco e UX para se juntar a nossa equipe. Como Designer de produto
+                    com foco em UX você orientará e implementará a experiência de nossos aplicativos, sites e canais digitais em geral com base 
+                    nas premissas de design e requisitos dos produtos.
+                </p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="candidatar-se" id="bot1">
+            </div>
+        </section>
+    </div>
+        <footer>
+            <h3>Contatos</h3>
+            <dl>
+                <dt>email</dt>
+                <dd>email@email.com</dd>
+                <br/>
+                <dt>telefone</dt>
+                <dd>(11)99999-9999</dd>
+            </dl>
+            <p>@LocalEasy</p>
+        </footer>
+    </body>
+</html>

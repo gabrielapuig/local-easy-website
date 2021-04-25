@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ept-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login </title>
+</head>
+<style>
+    *{
+            padding: 0;
+            margin: 0;
+    }
+    body{
+            background-color: #f1f1f1;
+            font-family: 'arial';
+    }
+    form{
+        background-color: white;
+        max-width: 500px;
+        width: 70%;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    form h3{
+        text-align: center;
+        color: #5f7c8a;
+    }
+    form input[type=text],
+    form input[type=password]{
+        width:100%;
+        height:45px;
+        border:1px solid #ccc;
+        padding-left: 10px;
+        margin: 10px 0;
+    }
+    form button{
+        width:100%;
+        height:45px;
+        cursor: pointer;
+        background-color: #5f7c8a;
+        color: white;
+        border-radius: 3px 3px ;
+    }
+    form input[type=submit]:hover{
+        background-color: #4a5f6a;
+    }
+    header {
+            text-align: center;
+            background: rgb(182, 3, 107);
+            padding: 10px;
+    }
+        
+    h1{
+          color: white;
+    }
+        
+    nav ul{
+            list-style-type: none;
+            background-color: #5f7c8a; 
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+    }
+        
+    nav a{
+            color:white;
+            text-decoration: none;
+            padding: 16px;
+            display: block;
+    }
+        
+    nav li{
+            float:left;
+    }
+        
+    nav a:hover{
+            background-color: white;
+            color: #5f7c8a;
+    }
+    footer{
+        padding: 20px;
+        background: #5f7c8a;
+        color: white;
+        padding-top: 20px;
+        display: table;
+        width: 100%;
+        }
+        
+        footer dl, footer p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        footer dt{
+            font-weight: bold;
+        }
+        
+        footer dd{
+            margin-left: 0;
+        }
+        
+        footer d{
+            text-align: left;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        #logo{
+            width: 10%;
+            height: auto;
+        }
+    
+</style>
+<body>
+    <div id="interface">
+    <header>
+        <img id="logo" src="img/logo.png" width="100" alt="Logo" title="Nosso Logo" />
+        <h1>LocalEasy</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="profissional.html">Profissional</a></li>
+                <li><a href="contratante.html">Contratante</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+    <form>
+        <h3>Login</h3>
+        <input id="email" type="text" name="e-mail" placeholder="e-mail..." required/>
+        <input id="password" type="password" name="senha" placeholder="senha..." />
+        <input id="prof" type="radio" name="radche" checked/>
+        <label for="prof">Profissional</label>
+        <input id="cont" type="radio" name="radche" />
+        <label for="cont">Contratante</label> 
+        <button onclick="acessar();">Acessar</button>
+        <p>Não possui cadastro?</p>
+        <button onclick="pegar();">Cadastrar já</button>
+    </form>
+    </section>
+</body>
+    <script>
+    function pegar(botao){
+        window.open('cadastro.html');
+    }
+
+
+    function acessar(){
+        if (document.getElementById('prof').checked && document.getElementById('email').value!="" && document.getElementById('password').value!=""){
+            window.open('Pprof.html');
+
+        }else if(document.getElementById('cont').checked && document.getElementById('email').value!="" && document.getElementById('password').value!=""){
+            window.open('Pcontra.html');
+
+        }else{
+            alert("Verifique se os campos estão corretos");
+        }
+
+    }
+    </script>
+</html>

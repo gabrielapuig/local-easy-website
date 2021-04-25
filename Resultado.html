@@ -1,0 +1,316 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: arial, helvetica;
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            background: rgb(182, 3, 107);
+            padding: 30px;
+        }
+        header h1{
+            font-size: 50px;
+            color: white;
+        }
+        nav ul{
+            list-style-type: none;
+            background-color: #5f7c8a; 
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a{
+             color:white;
+            text-decoration: none;
+            padding: 16px;
+            display: block;
+        }
+        
+        nav li{
+            float:left;
+        }
+        
+        nav a:hover{
+            background-color: white;
+            color: #5f7c8a;
+        }
+        
+        #logo{
+            width: 10%;
+            height: auto;
+        }
+        
+        .row{
+            padding: 0 200px;
+            display: table;
+        }
+        footer{
+            padding: 20px;
+            background: #5f7c8a;
+            color: white;
+            padding-top: 20px;
+            display: table;
+            width: 100%;
+        }
+        
+        footer dl, footer p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        footer dt{
+            font-weight: bold;
+        }
+        
+        footer dd{
+            margin-left: 0;
+        }
+        
+        footer d{
+            text-align: left;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .campo {
+                padding: 5px;
+                margin: 5px;
+        }
+        #fild{
+            height: auto;
+            padding-top: 3px;
+            border-width:4px;
+            padding:2em;
+        }
+        #carreira{
+            padding: 3px;
+            margin-left: 2px;
+            margin-bottom: 6px;
+        }
+        #ldt {
+            padding: 3px;
+            margin-left: 2px;
+            margin-bottom: 15px;
+        }
+        #loc{
+                    padding: 3px;
+                    margin-left: 2px;
+                    margin-bottom: 15px;
+                }
+        #inf {
+            height: 500px;
+            display: inline-block;
+            height: auto;
+            margin-bottom: 10%;
+            padding: 5px;
+            box-shadow: 3px 3px rgb(65, 60, 60);
+            border-radius: 5px 5px;
+            margin: 15px;
+            float: left; 
+            width: calc(90%/3);
+            background-color: whitesmoke;
+        }
+        
+        #bot {
+            background-color: red;
+            height: 35px;
+            width: 100px;
+            margin-left: 5%;
+            border-radius: 3px 3px;
+            color: white;
+        }
+        #bot1 {
+            height: 35px;
+            width: 100px;
+            margin-left: 5%;
+            border-radius: 3px 3px;
+        }
+        #tit{
+            color:red;
+        }
+        #img {
+            max-width: 30%;
+            height: auto;
+            float: right;
+            margin-right: 2%;
+                                 /* Efeitos de Bordas incluídos... */
+            border-radius: 5px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> 
+            <img id="logo" src="logo.png" width="100" alt="Logo" title="Nosso Logo" />
+        LocalEasy</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="profissional.html">Profissional</a></li>
+                <li><a href="contratante.html">Contratante</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    <div class="row">
+        <section>
+            <fieldset id="fild">
+                <div>
+                    <label for="carera">Especialidade</label>
+                    <select id="carreira" class="texto">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="PHP">PHP</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ldt">Horário de Disponibilidade</label>
+                    <select id="ldt" class="texto">
+                        <option value="Manhã">Manhã</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Noite">Noite</option>
+                    </select>
+                </div>
+                 <div>
+                    <label for="ldt">Avaliação</label>
+                    <select id="ldt" class="texto">
+                        <option value="Manhã">Ótimo</option>
+                        <option value="Tarde">Bom</option>
+                        <option value="Noite">Ruim</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ldt">Estado</label>
+                    <select id="ldt" class="texto">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="loc">Cidade</label>
+                    <select id="loc" class="texto">
+                        <option value="">Todas</option>
+                        <option value="Natal">Natal</option>
+                        <option value="Barueri">Barueri</option>
+                        <option value="Campinas">Campinas</option>
+                        <option value="Ribeirão Preto">Ribeirão Preto</option>
+                        <option value="Rio de Janeiro e São Paulo">Rio de Janeiro e São Paulo</option>
+                        <option value="São Caetano do Sul">São Caetano do Sul</option>
+                        <option value="Brasília">Brasília</option>
+                        <option value="Belo Horizonte">Belo Horizonte</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Florianópolis">Florianópolis</option>
+                        <option value="Salvador">Salvador</option>
+                        <option value="Osasco">Osasco</option>
+                        <option value="Curitiba">Curitiba</option>
+                        <option value="RIO CLARO">Rio Claro</option>
+                        <option value="SÃO PAULO">São Paulo</option>
+                        <option value="Cuiabá">Cuiabá </option>
+                        <option value="Teresina">Teresina</option>
+                        <option value="São José dos Campos">São José dos Campos</option>
+                        <option value=" São José dos Campos"> São José dos Campos</option>
+                        <option value="Barueri">Barueri</option>
+                        <option value="Indaiatuba">Indaiatuba</option>
+                        <option value="Aracaju">Aracaju</option>
+                        <option value="São Luís ">São Luís </option>
+                        <option value="Sao Paulo">Sao Paulo</option>
+                        <option value="São Luís">São Luís</option>
+                    </select>
+                </div>
+                <a href="filtro.html"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Filtrar</button></a>
+            </fieldset>
+            <div id="inf">
+                <img id="img" src="fotodeperfil.png" />
+                <h2 id="tit">Desenvolvedor de Software</h2>
+                <p><strong>Nome:</strong>José Augusto<br><strong>Especialidade:</strong> HTML e CSS<br><strong>Cidade:</strong> Recife<br><strong>Estado:</strong> PE<br><strong>Horário Disponível:</strong> Tarde<br><strong>Avaliação:</strong> Ótimo</p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="enviar proposta" id="bot1">
+            </div>
+            <div id="inf">
+                <img id="img" src="perfil-2.png" />
+                <h2 id="tit">Desenvolvedor de Software</h2>
+                <p><strong>Nome:</strong>Flávia Nunes<br><strong>Especialidade:</strong> JavaScript<br><strong>Cidade:</strong> Maceió<br><strong>Estado:</strong> AL<br><strong>Horário Disponível:</strong> Manhã<br><strong>Avaliação:</strong> Bom</p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="enviar proposta" id="bot1">
+            </div>
+            <div id="inf">
+                <img id="img" src="perfil-3.png" />
+                <h2 id="tit">Desenvolvedor de Software</h2>
+                <p><strong>Nome:</strong>Romero Gones<br><strong>Especialidade:</strong> HTML e CSS<br><strong>Cidade:</strong> Fortaleza<br><strong>Estado:</strong> CE<br><strong>Horário Disponível:</strong> Noite<br><strong>Avaliação:</strong> Ruim</p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="enviar proposta" id="bot1">
+            </div>
+            <div id="inf">
+                <img id="img" src="fotodeperfil.png" />
+                <h2 id="tit">Desenvolvedor de Software</h2>
+                <p><strong>Nome:</strong>Pedro Caminha<br><strong>Especialidade:</strong> HTML<br><strong>Cidade:</strong> Curitiba<br><strong>Estado:</strong> PR<br><strong>Horário Disponível:</strong> Noite<br><strong>Avaliação:</strong> Ótimo</p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="enviar proposta" id="bot1">
+            </div>
+            <div id="inf">
+                <img id="img" src="perfil-2.png" />
+                <h2 id="tit">Desenvolvedor de Software</h2>
+                <p><strong>Nome:</strong>Maria Corre<br><strong>Especialidade:</strong> JavaScript<br><strong>Cidade:</strong> São Paulo<br><strong>Estado:</strong> SP<br><strong>Horário Disponível:</strong> Tarde<br><strong>Avaliação:</strong> Bom</p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="enviar proposta" id="bot1">
+            </div>
+            <div id="inf">
+                <img id="img" src="perfil-3.png" />
+                <h2 id="tit">Desenvolvedor de Software</h2>
+                <p><strong>Nome:</strong>Leandro Anda<br><strong>Especialidade:</strong> CSS<br><strong>Cidade:</strong> Rio de Janeiro<br><strong>Estado:</strong> RJ<br><strong>Horário Disponível:</strong> Noite<br><strong>Avaliação:</strong> Ruim</p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="enviar proposta" id="bot1">
+            </div>
+            
+        </section>
+    </div>
+            <footer>
+            <h3>Contatos</h3>
+            <dl>
+                <dt>email</dt>
+                <dd>email@email.com</dd>
+                <br/>
+                <dt>telefone</dt>
+                <dd>(11)99999-9999</dd>
+            </dl>
+            <p>@LocalEasy</p>
+        </footer>
+    </body>
+</html>

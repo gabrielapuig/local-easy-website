@@ -1,0 +1,191 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: arial, helvetica;
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            background: rgb(182, 3, 107);
+            padding: 30px;
+        }
+        header h1{
+            font-size: 50px;
+            color: white;
+        }
+        nav ul{
+            list-style-type: none;
+            background-color: #5f7c8a; 
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a{
+             color:white;
+            text-decoration: none;
+            padding: 16px;
+            display: block;
+        }
+        
+        nav li{
+            float:left;
+        }
+        
+        nav a:hover{
+            background-color: white;
+            color: #5f7c8a;
+        }
+        
+        #logo{
+            width: 10%;
+            height: auto;
+        }
+        
+        .row{
+            padding: 0 200px;
+            display: table;
+        }
+        footer{
+            padding: 20px;
+            background: #5f7c8a;
+            color: white;
+            padding-top: 20px;
+            display: table;
+            width: 100%;
+        }
+        
+        footer dl, footer p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        footer dt{
+            font-weight: bold;
+        }
+        
+        footer dd{
+            margin-left: 0;
+        }
+        
+        footer d{
+            text-align: left;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .campo {
+                padding: 5px;
+                margin: 5px;
+        }
+        #fild{
+            height: auto;
+            padding-top: 3px;
+            border-width:4px;
+            padding:2em;
+        }
+        #carreira{
+            padding: 3px;
+            margin-left: 2px;
+            margin-bottom: 6px;
+        }
+        #ldt {
+            padding: 3px;
+            margin-left: 2px;
+            margin-bottom: 15px;
+        }
+        #loc{
+                    padding: 3px;
+                    margin-left: 2px;
+                    margin-bottom: 15px;
+                }
+        #inf {
+            height: 500px;
+            display: inline-block;
+            height: auto;
+            margin-bottom: 10%;
+            padding: 5px;
+            box-shadow: 3px 3px rgb(65, 60, 60);
+            border-radius: 5px 5px;
+            margin: 15px;
+            float: left; 
+            background-color: whitesmoke;
+        }
+        
+        #bot {
+            background-color: red;
+            height: 35px;
+            width: 100px;
+            margin-left: 5%;
+            border-radius: 3px 3px;
+            color: white;
+        }
+        #bot1 {
+            height: 35px;
+            width: 100px;
+            margin-left: 5%;
+            border-radius: 3px 3px;
+        }
+        #tit{
+            color:red;
+        }
+        #img {
+            max-width: 30%;
+            height: auto;
+            float: right;
+            margin-right: 2%;
+                                 /* Efeitos de Bordas incluídos... */
+            border-radius: 5px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> 
+            <img id="logo" src="logo.png" width="100" alt="Logo" title="Nosso Logo" />
+        LocalEasy</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="profissional.html">Profissional</a></li>
+                <li><a href="contratante.html">Contratante</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    <div class="row">
+        <section>
+            <div>
+                <a href="Resultado.html"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Voltar</button></a>
+                </div>
+            <div id="inf">
+                <img id="img" src="perfil-2.png" />
+                <h2 id="tit">Desenvolvedor de Software</h2>
+                <p><strong>Nome:</strong>Maria Corre<br><strong>Especialidade:</strong> JavaScript<br><strong>Cidade:</strong> São Paulo<br><strong>Estado:</strong> SP<br><strong>Horário Disponível:</strong> Tarde<br><strong>Avaliação:</strong> Bom</p>
+                <input type="button" value="ver mais" id="bot">
+                <input type="button" value="enviar proposta" id="bot1">
+            </div>
+        </section>
+    </div>
+            <footer>
+            <h3>Contatos</h3>
+            <dl>
+                <dt>email</dt>
+                <dd>email@email.com</dd>
+                <br/>
+                <dt>telefone</dt>
+                <dd>(11)99999-9999</dd>
+            </dl>
+            <p>@LocalEasy</p>
+        </footer>
+    </body>
+</html>
